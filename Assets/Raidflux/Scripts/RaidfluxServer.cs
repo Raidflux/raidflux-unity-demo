@@ -42,7 +42,7 @@ namespace Raidflux
 
         private const string REGISTER_API = "/rfsdk/gameserver/register";
         private const string REPORT_API = "/rfsdk/gameserver/report";
-        private const string MATCHMAKER_HOST = "https://matchmaker.tunnel.csteenhuis.com";
+        private const string MATCHMAKER_HOST = "https://matchmaker.raidflux.com";
         private const string MATCHMAKER_MOTHERSHIPS = "/discovery/deployment/{0}/motherships";
         private const string MATCHMAKER_GAMSERVERS = "/discovery/mothership/{0}/gameservers";
 
