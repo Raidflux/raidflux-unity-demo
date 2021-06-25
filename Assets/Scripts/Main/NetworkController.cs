@@ -19,15 +19,18 @@ public class NetworkController : MonoBehaviour
             {
                 RaidfluxServer.Singleton.Init(uNetTransport.MaxConnections);
                 
-                networkManager.OnClientConnectedCallback += updatePlayerCount;
-                networkManager.OnClientDisconnectCallback += updatePlayerCount;
+                networkManager.OnClientConnectedCallback += UpdatePlayerCount;
+                networkManager.OnClientDisconnectCallback += UpdatePlayerCount;
             }
         };
     }
 
-    private void updatePlayerCount(ulong id)
+    private void UpdatePlayerCount(ulong id)
     {
-        RaidfluxServer.Singleton.ReportPlayerCount(networkManager.ConnectedClients.Count, uNetTransport.MaxConnections);
+        RaidfluxServer.Singleton.ReportPlayerCount(
+            networkManager.ConnectedClients.Count, 
+            uNetTransport.MaxConnections
+        );
     }
     
 }
