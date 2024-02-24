@@ -107,7 +107,7 @@ public class Menu : MonoBehaviour
         int port = 0;
         foreach (Port gameserverPort in gameserver.ports)
         {
-            if (gameserverPort.protocol == "udp")
+            if (gameserverPort.internalPort == unetTransport.ServerListenPort)
             {
                 port = gameserverPort.port;
                 break;

@@ -30,6 +30,7 @@ namespace Raidflux
     public class Port
     {
         public int port;
+        public int internalPort;
         public string protocol;
     }
     
@@ -270,6 +271,7 @@ namespace Raidflux
                             ports.Add(new Port
                             {
                                 port = portJson.Value<int>("port"),
+                                internalPort = portJson.Value<int>("internal_port"),
                                 protocol = portJson.Value<string>("protocol")
                             });
                             
